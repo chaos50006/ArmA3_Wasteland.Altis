@@ -38,8 +38,8 @@ switch (true) do
 		showPlayerNames = if (isNil "showPlayerNames") then { true } else { !showPlayerNames };
 	};
 
-	// Earplugs - End Key
-	case (_key == 207):
+	// Earplugs - Pause/Break Key
+	case (_key == 197):
 	{
 		if (soundVolume > 0.5) then
 		{

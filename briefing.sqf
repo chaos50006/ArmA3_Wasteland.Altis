@@ -13,6 +13,19 @@ player createDiarySubject ["credits", "Credits"];
 
 player createDiaryRecord ["changelog",
 [
+"HMGT",
+"
+<br/> [Added] Ear Plugs: Pause/Break key
+<br/> [Added] Mag Repack: left Ctrl + R
+<br/> [Added] DLC-heli Pilot/Gunner option for non-DLC players
+<br/> [Added] R.I.P. Marker on corpse location after respawn
+<br/> [Added] Extra missions: Hostile Jet, Smugglers, Snipers & Hack laptop
+<br/> [Added] Base relocker (It is hackable and destroyable)
+"
+]];
+
+player createDiaryRecord ["changelog",
+[
 "v1.1b",
 "
 <br/>[Added] Marksmen DLC content
@@ -36,7 +49,6 @@ player createDiaryRecord ["changelog",
 <br/>[Added] Union Jack vehicle color
 <br/>[Added] Skins hidden in gamefiles for MH-9, Mohawk, and Taru
 <br/>[Added] Improved admin spectate camera by micovery
-<br/>[Added] Earplugs (End key)
 <br/>[Changed] Full rewrite of vehicle respawning system
 <br/>[Fixed] Player moved to position too early during save restore
 <br/>[Fixed] Mission timeout not extending on AI kill
@@ -331,6 +343,10 @@ player createDiaryRecord ["credits",
 <br/>	* Tonic (BIS forums)
 <br/>	* wiking.at (A3W forums)
 <br/>	* Zenophon (BIS Forums)
+<br/>	* Cael817 (A3W forums)
+<br/>	* Micovery (A3W forums)
+<br/>	* BadVolt (A3W forums)
+<br/>	* LouD (NL United / A3W forums)
 <br/>
 <br/><font size='16'>Thanks A LOT to everyone involved for the help and inspiration!</font>
 "

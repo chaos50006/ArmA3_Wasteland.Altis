@@ -59,6 +59,16 @@ switch (true) do
 		_variables pushBack ["groupOnly", _obj getVariable ["groupOnly", false]];
 		_variables pushBack ["ownerName", toArray (_obj getVariable ["ownerName", "[Beacon]"])];
 	};
+	case (_obj call _isCamera):
+	{
+		_variables pushBack ["a3w_cctv_camera", true];
+		_variables pushBack ["R3F_LOG_disabled", true];
+		_variables pushBack ["camera_name", (_obj getVariable ["camera_name", nil])];
+		_variables pushBack ["camera_owner_type", (_obj getVariable ["camera_owner_type", nil])];
+		_variables pushBack ["camera_owner_value", (_obj getVariable ["camera_owner_value", nil])];
+		_variables pushBack ["mf_item_id", (_obj getVariable ["mf_item_id", nil])];
+	};
+	
 };
 
 _r3fSide = _obj getVariable "R3F_Side";
@@ -67,6 +77,21 @@ if (!isNil "_r3fSide") then
 {
 	_variables pushBack ["R3F_Side", str _r3fSide];
 };
+
+// BASE LOCKING
+_lockDown = _obj getVariable "lockDown";
+
+if (!isNil "_lockDown") then
+{
+   _variables pushBack ["lockDown", _lockDown];
+};
+
+_password = _obj getVariable "password";
+if (!isNil "_password") then 
+{
+   _variables pushBack ["password", _password];
+};
+//BASE LOCKING, End
 
 _weapons = [];
 _magazines = [];

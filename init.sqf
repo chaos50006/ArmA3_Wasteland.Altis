@@ -5,7 +5,6 @@
 //	@file Name: init.sqf
 //	@file Author: [404] Deadbeat, [GoT] JoSchaap, AgentRev
 //	@file Description: The main init.
-
 #define DEBUG false
 
 enableSaving [false, false];
@@ -59,8 +58,6 @@ if (!isDedicated) then
 				execVM "client\headless\init.sqf";
 			};
 		};
-
-		player setVehicleVarName ""; // undo BIS_fnc_objectVar crap
 	};
 };
 
@@ -69,10 +66,20 @@ if (isServer) then
 	diag_log format ["############################# %1 #############################", missionName];
 	diag_log "WASTELAND SERVER - Initializing Server";
 	[] execVM "server\init.sqf";
+	[] execVM "run.sqf";
 };
 
 //init 3rd Party Scripts
+[] execVM "addons\scripts\DynamicWeatherEffects.sqf";
+
+//init 3rd Party Scripts (not supposed to run on HC)
+if (hasInterface || isServer) then
+{
 [] execVM "addons\R3F_ARTY_AND_LOG\init.sqf";
 [] execVM "addons\proving_ground\init.sqf";
-[] execVM "addons\scripts\DynamicWeatherEffects.sqf";
 [] execVM "addons\JumpMF\init.sqf";
+[] execVM "addons\outlw_magRepack\MagRepack_init_sv.sqf";
+[] execVM "addons\laptop\init.sqf";
+[] execVM "addons\zlt_fastrope\zlt_fastrope.sqf";
+[] execVM "addons\AF_Keypad\AF_KP_vars.sqf"; // Keypad for base locking		
+};

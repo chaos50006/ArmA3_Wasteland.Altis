@@ -46,12 +46,19 @@ lootWeapon_list =
 			"hgun_PDW2000_F",
 			"LMG_Mk200_F",
 			"LMG_Zafir_F",
+			"MMG_02_black_F", // DLC MMG
+			"MMG_01_tan_F", //DLC MMG
 			"Rangefinder",
 			"SMG_01_F",                         // Vermin .45 ACP
 			"SMG_02_F",                         // Sting 9mm
 			"srifle_EBR_F",
 			"srifle_GM6_F",
-			"srifle_LRR_F"
+			"srifle_LRR_F",
+			"srifle_DMR_06_camo_F",
+			"srifle_DMR_03_F",
+			"srifle_DMR_02_F",
+			"srifle_DMR_05_blk_F",
+			"srifle_DMR_04_F"
 		]
 	],
 	[ // INDUSTRIAL
@@ -77,7 +84,12 @@ lootWeapon_list =
 			"arifle_MX_GL_F",
 			"Rangefinder",
 			"srifle_GM6_F",
-			"srifle_LRR_F"
+			"srifle_LRR_F",
+			"srifle_DMR_06_camo_F",
+			"srifle_DMR_03_F",
+			"srifle_DMR_02_F",
+			"srifle_DMR_05_blk_F",
+			"srifle_DMR_04_F"
 		]
 	]
 ];
@@ -137,6 +149,11 @@ lootMagazine_list =
 			"30Rnd_65x39_caseless_mag_Tracer",
 			"30Rnd_9x21_Mag",
 			"30Rnd_9x21_Mag",
+			"10Rnd_338_Mag", //DLC Ammo
+			"130Rnd_338_Mag", //DLC Ammo
+			"10Rnd_93x64_DMR_05_Mag", //DLC Ammo
+			"150Rnd_93x64_Mag", //DLC Ammo
+			"10Rnd_127x54_Mag", //DLC Ammo
 			/*"3Rnd_HE_Grenade_shell",
 			"3Rnd_SmokeBlue_Grenade_shell",
 			"3Rnd_SmokeGreen_Grenade_shell",
@@ -237,6 +254,43 @@ lootItem_list =
 			"NVGoggles",
 			//"NVGoggles_INDEP",
 			//"NVGoggles_OPFOR",
+			"G_B_Diving",
+			"G_O_Diving",
+			"G_Aviator",
+			"G_Shades_Black",
+			"G_Shades_Blue",
+			"G_Shades_Green",
+			"G_Shades_Red",
+			"G_Spectacles",
+			"G_Spectacles_Tinted",
+			"G_Lady_Blue",
+			"G_Lady_Dark",
+			"G_Lady_Mirror",
+			"G_Lady_Red",
+			"G_Combat",
+			"G_Lowprofile",
+			"G_Sport_Blackred",
+			"G_Sport_Blackwhite",
+			"G_Sport_Blackyellow",
+			"G_Sport_Checkered",
+			"G_Sport_Greenblack",
+			"G_Sport_Red",
+			"G_Squares",
+			"G_Squares_Tinted",
+			"G_Tactical_Black",
+			"G_Tactical_Clear",
+			"G_Balaclava_blk",
+			"G_Balaclava_combat",
+			"G_Balaclava_lowprofile",
+			"G_Balaclava_oli",
+			"G_Bandanna_beast",
+			"G_Bandanna_blk",
+			"G_Bandanna_khk",
+			"G_Bandanna_oli",
+			"G_Bandanna_tan",
+			"G_Bandanna_aviator",
+			"G_Bandanna_shades",
+			"G_Bandanna_sport",
 			"optic_Aco",
 			"optic_ACO_grn",
 			"optic_aco_smg",
@@ -245,13 +299,35 @@ lootItem_list =
 			"optic_Holosight",
 			"optic_Holosight_smg",
 			"optic_SOS",
+			"optic_NVS",
 			"ToolKit",
 			"H_HelmetB",
 			"H_HelmetIA",
 			"H_HelmetO_ocamo",
+			"V_Press_F",
 			"V_PlateCarrier1_rgr",
 			"V_PlateCarrierIA1_dgtl",
-			"V_HarnessO_brn"
+			"V_HarnessO_brn",
+			"muzzle_snds_338_black", // DLC Item
+			"muzzle_snds_338_green", // DLC Item
+			"muzzle_snds_338_sand", // DLC Item
+			"muzzle_snds_93mmg", // DLC Item
+			"muzzle_snds_93mmg_tan", // DLC Item
+			"bipod_01_F_blk", // DLC Item
+			"bipod_02_F_blk", // DLC Item
+			"bipod_03_F_blk", // DLC Item
+			"bipod_01_F_mtp", // DLC Item
+			"bipod_02_F_hex", // DLC Item
+			"bipod_03_F_oli", // DLC Item
+			"bipod_01_F_snd", // DLC Item
+			"bipod_02_F_tan", // DLC Item
+			"optic_AMS", // DLC Item
+			"optic_AMS_khk", // DLC Item
+			"optic_AMS_snd", // DLC Item
+			"optic_KHS_blk", // DLC Item
+			"optic_KHS_hex", // DLC Item
+			"optic_KHS_old", // DLC Item
+			"optic_KHS_tan" // DLC Item
 		]
 	],
 	[ // INDUSTRIAL

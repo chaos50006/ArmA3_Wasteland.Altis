@@ -177,48 +177,66 @@ if (_key != "" && isPlayer _player && {_isGenStore || _isGunStore || _isVehStore
 			_object allowDamage _isDamageable;
 			_object setVariable ["allowDamage", _isDamageable];
 
-			switch (true) do
-			{
-				case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
+				switch (true) do
 				{
-					_object setAmmoCargo 5;
-				};
+					case ({_object isKindOf _x} count ["Box_NATO_AmmoVeh_F", "Box_East_AmmoVeh_F", "Box_IND_AmmoVeh_F"] > 0):
+					{
+						_object setAmmoCargo 5;
+					};
+					
+					//Disable damage on store crate
+					case ({_object isKindOf _x} count ["Box_NATO_Ammo_F"] > 0):
+					{
+						_object allowDamage false;
+					};
 
-				case (_object isKindOf "O_Heli_Transport_04_ammo_F"):
-				{
-					_object setAmmoCargo 10;
-				};
+					// Add food to bought food sacks.
+					case ({_object isKindOf _x} count ["Land_Sacks_goods_F"] > 0):
+					{
+						_object setVariable ["food", 50, true];
+					};
+					
+					// Add water to bought water barrels.
+					case ({_object isKindOf _x} count ["Land_BarrelWater_F"] > 0):
+					{
+						_object setVariable ["water", 50, true];
+					};
+						
+					case (_object isKindOf "O_Heli_Transport_04_ammo_F"):
+					{
+						_object setAmmoCargo 10;
+					};
 
-				case ({_object isKindOf _x} count ["B_Truck_01_ammo_F", "O_Truck_02_Ammo_F", "O_Truck_03_ammo_F", "I_Truck_02_ammo_F"] > 0):
-				{
-					_object setAmmoCargo 25;
-				};
+					case ({_object isKindOf _x} count ["B_Truck_01_ammo_F", "O_Truck_02_Ammo_F", "O_Truck_03_ammo_F", "I_Truck_02_ammo_F"] > 0):
+					{
+						_object setAmmoCargo 25;
+					};
 
-				case ({_object isKindOf _x} count ["C_Van_01_fuel_F", "I_G_Van_01_fuel_F", "O_Heli_Transport_04_fuel_F"] > 0):
-				{
-					_object setFuelCargo 10;
-				};
+					case ({_object isKindOf _x} count ["C_Van_01_fuel_F", "I_G_Van_01_fuel_F", "O_Heli_Transport_04_fuel_F"] > 0):
+					{
+						_object setFuelCargo 10;
+					};
 
-				case ({_object isKindOf _x} count ["B_Truck_01_fuel_F", "O_Truck_02_fuel_F", "O_Truck_03_fuel_F", "I_Truck_02_fuel_F"] > 0):
-				{
-					_object setFuelCargo 25;
-				};
+					case ({_object isKindOf _x} count ["B_Truck_01_fuel_F", "O_Truck_02_fuel_F", "O_Truck_03_fuel_F", "I_Truck_02_fuel_F"] > 0):
+					{
+						_object setFuelCargo 25;
+					};
 
-				case (_object isKindOf "Offroad_01_repair_base_F"):
-				{
-					_object setRepairCargo 5;
-				};
+					case (_object isKindOf "Offroad_01_repair_base_F"):
+					{
+						_object setRepairCargo 5;
+					};
 
-				case (_object isKindOf "O_Heli_Transport_04_repair_F"):
-				{
-					_object setRepairCargo 10;
-				};
+					case (_object isKindOf "O_Heli_Transport_04_repair_F"):
+					{
+						_object setRepairCargo 10;
+					};
 
-				case ({_object isKindOf _x} count ["B_Truck_01_Repair_F", "O_Truck_02_box_F", "O_Truck_03_repair_F", "I_Truck_02_box_F"] > 0):
-				{
-					_object setRepairCargo 25;
+					case ({_object isKindOf _x} count ["B_Truck_01_Repair_F", "O_Truck_02_box_F", "O_Truck_03_repair_F", "I_Truck_02_box_F"] > 0):
+					{
+						_object setRepairCargo 25;
+					};
 				};
-			};
 
 			if (_object getVariable ["A3W_purchasedVehicle", false] && !isNil "fn_manualVehicleSave") then
 			{

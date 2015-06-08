@@ -17,7 +17,8 @@ MainMissions =
 	["mission_MBT", 1],
 	["mission_LightArmVeh", 1],
 	["mission_ArmedHeli", 1],
-	["mission_CivHeli", 1]
+	["mission_CivHeli", 1],
+	["mission_Hackers", 1]
 ];
 
 SideMissions =
@@ -26,10 +27,12 @@ SideMissions =
 	["mission_MiniConvoy", 1],
 	["mission_SunkenSupplies", 1],
 	["mission_TownInvasion", 2],
-	//["mission_AirWreck", 1.5],
-	//["mission_WepCache", 1.5],
+	["mission_AirWreck", 1.5],
+	["mission_WepCache", 1.5],
 	["mission_Outpost", 3],
-	["mission_Truck", 1]
+	["mission_Truck", 1],
+	["mission_Roadblock", 1],
+	["mission_geocache", 1]
 ];
 
 MoneyMissions =
@@ -38,13 +41,28 @@ MoneyMissions =
 	["mission_SunkenTreasure", 1]
 ];
 
+ExtraMissions =
+[
+	["mission_Sniper", 1],
+	["mission_Smugglers", 1],
+	["mission_HostileJet", 0.5]
+];
+
+PatrolMissions =
+[
+	["mission_militaryPatrol", 1]
+];
+
 MainMissions = [MainMissions, [["A3W_heliPatrolMissions", ["mission_Coastal_Convoy", "mission_HostileHeliFormation"]], ["A3W_underWaterMissions", ["mission_ArmedDiversquad"]]]] call removeDisabledMissions;
 SideMissions = [SideMissions, [["A3W_heliPatrolMissions", ["mission_HostileHelicopter"]], ["A3W_underWaterMissions", ["mission_SunkenSupplies"]]]] call removeDisabledMissions;
 MoneyMissions = [MoneyMissions, [["A3W_underWaterMissions", ["mission_SunkenTreasure"]]]] call removeDisabledMissions;
+ExtraMissions = [ExtraMissions, [["A3W_heliPatrolMissions", ["mission_HostileJet"]]]] call removeDisabledMissions;
 
 { _x set [2, false] } forEach MainMissions;
 { _x set [2, false] } forEach SideMissions;
 { _x set [2, false] } forEach MoneyMissions;
+{ _x set [2, false] } forEach ExtraMissions;
+{ _x set [2, false] } forEach PatrolMissions;
 
 MissionSpawnMarkers = [];
 SunkenMissionMarkers = [];
@@ -71,3 +89,8 @@ CoastalConvoyPaths = [];
 {
 	CoastalConvoyPaths pushBack [_x, false];
 } forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\coastalConvoysList.sqf");
+
+PatrolConvoyPaths = [];
+{
+	PatrolConvoyPaths pushBack [_x, false];
+} forEach (call compile preprocessFileLineNumbers "mapConfig\convoys\patrolConvoysList.sqf");

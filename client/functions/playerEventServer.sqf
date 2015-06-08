@@ -20,6 +20,10 @@ switch (toLower _type) do
 			{
 				[] spawn fn_savePlayerData;
 			};
+		}
+		else
+		{
+			["The money was counterfeit!", 5] call mf_notify_client;
 		};
 	};
 
@@ -29,8 +33,7 @@ switch (toLower _type) do
 
 		if (_amount != 0) then
 		{
-			// temporarily offloaded to server due to negative wallet glitch
-			//player setVariable ["cmoney", (player getVariable ["cmoney", 0]) - _amount, true];
+			player setVariable ["cmoney", (player getVariable ["cmoney", 0]) - _amount, true];
 
 			if (["A3W_playerSaving"] call isConfigOn) then
 			{

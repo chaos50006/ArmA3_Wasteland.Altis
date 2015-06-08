@@ -18,7 +18,7 @@ if !(_unit isUniformAllowed _uniform) then
 {
 	_uniforms =
 	[
-		["U_B_CombatUniform_mcam", "U_O_CombatUniform_ocamo", "U_I_CombatUniform"],
+		["U_B_CTRG_1", "U_B_CombatUniform_mcam", "U_O_CombatUniform_ocamo", "U_I_CombatUniform"],
 		["U_B_GhillieSuit", "U_O_GhillieSuit", "U_I_GhillieSuit"],
 		["U_B_FullGhillie_ard", "U_O_FullGhillie_ard", "U_I_FullGhillie_ard"],
 		["U_B_FullGhillie_lsh", "U_O_FullGhillie_lsh", "U_I_FullGhillie_lsh"],
